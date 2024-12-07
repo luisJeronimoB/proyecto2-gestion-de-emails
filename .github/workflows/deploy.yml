@@ -25,7 +25,7 @@ jobs:
     # Desplegar la función Lambda
     - name: Deploy Lambda Function
       run: |
-        zip function.zip lambda_function.py
+        zip function.zip index.mjs
         aws lambda update-function-code \
-          --function-name procesador-notificaciones \
+          --function-name proyecto2-emails \
           --zip-file fileb://function.zip
